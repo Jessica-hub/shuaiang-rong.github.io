@@ -17,14 +17,14 @@ Education
 Work Experience
 ======
 * Quanta Technology LLC – Intern, Distribution Team (May 2023 – Aug. 2023)
-  * Conducted power distribution analysis and renewable integration studies
-  * Supported DER/IBR protection and IEEE 2800 compliance projects
-  * Supervisor: Andrija Sadikovic  
+  * Conducted power distribution analysis
+
+
 
 * Graduate Research Assistant, University of Illinois Chicago (Sep. 2019 – Present)
-  * Research in AI-driven environmental hazard prediction and renewable integration
+  * Supported DER/IBR protection and IEEE 2800 compliance projects
+  * Research in AI-driven environmental hazard prediction
   * Developed deep learning frameworks for wildfire spread prediction, vegetation monitoring, and adversarial robustness
-  * Supervisor: Prof. Ahmet Enis Cetin, Prof. Lina He
 
 * Teaching Assistant, University of Illinois Chicago (2019 – Present)
   * Assisted in courses on power systems, signal processing, and image processing
@@ -53,24 +53,6 @@ Skills
 * Geospatial/Remote Sensing: Sentinel-2, Landsat, VIIRS, NDVI/NBR indices, ArcGIS, GDAL  
 * Programming & Tools: Python, PyTorch, TensorFlow, MATLAB, OpenCV, LaTeX, Git, Visual Studio  
 * Power Systems & Simulation: Simulink, OPAL-RT, AutoCAD, LTspice  
-
-Publications
-======
-<ul>{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
-
-Talks
-======
-<ul>{% for post in site.talks reversed %}
-  {% include archive-single-talk-cv.html %}
-{% endfor %}</ul>
-
-Teaching
-======
-<ul>{% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
 
 Service and Leadership
 ======
