@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Shuaiang Rong"
   pronouns         : she/her # example: "she/her"  
-  bio              : "Shuaiang Rong is a Ph.D. candidate in Electrical and Computer Engineering at the University of Illinois Chicago. Her research focuses on artificial intelligence for environmental hazard prediction, including wildfire spread forecasting, vegetation management in power systems, renewable energy integration, and air-leak detection. She develops advanced deep learning methods that combine computer vision, remote sensing, and signal processing. Shuaiang has published in IEEE journals and conferences and actively collaborates with utilities and government agencies to improve resilience and sustainability."
+  bio              : "Ph.D. candidate in [Electrical and Computer Engineering at University of Illinois Chicago](https://ece.uic.edu/)."
   location         : "Chicago, IL, 60607, US"
   employer         : "University of Illinois Chicago"
   uri              : # URL
