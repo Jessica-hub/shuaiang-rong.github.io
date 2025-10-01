@@ -13,20 +13,20 @@ title                    : "Shuaiang Rong"
 title_separator          : "-"
 name                     : &name "Shuaiang Rong"
 description              : &description "AI & Power System Researcher"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://shuaiang-rong.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+url                      : https://jessica-hub.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "shuaiang-rong.github.io"
+repository               : "jessica-hub.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Shuaiang Rong"
   pronouns         : she/her # example: "she/her"  
-  bio              : "Shuaiang Rong is a Ph.D. candidate in Electrical and Computer Engineering at the University of Illinois Chicago. Her research focuses on artificial intelligence for environmental hazard prediction, including wildfire spread forecasting, vegetation management in power systems, renewable energy integration, and air-leak detection. She develops advanced deep learning methods that combine computer vision, remote sensing, and signal processing. Shuaiang has published in IEEE journals and conferences and actively collaborates with utilities and government agencies to improve resilience and sustainability."
+  bio              : "AI & Power System Researcher"
   location         : "Chicago, IL, 60607, US"
   employer         : "University of Illinois Chicago"
   uri              : # URL
@@ -40,7 +40,7 @@ author:
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0002-2121-7175"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
 
@@ -48,7 +48,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "shuaiang-rong"
+  github           : "Jessica-hub"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
