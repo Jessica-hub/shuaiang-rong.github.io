@@ -27,7 +27,7 @@ def tsv_to_md(tsvfile, outdir, category):
         md += f"bibtex_url: '{item.bibtex_url}'\n"
         md += f"citation: '{item.citation}'\n"
         md += "---\n\n"
-        md += f"Recommended citation: {item.citation}\n"
+      #  md += f"Recommended citation: {item.citation}\n"
 
         os.makedirs(outdir, exist_ok=True)
         with open(os.path.join(outdir, md_filename), "w", encoding="utf-8") as f:

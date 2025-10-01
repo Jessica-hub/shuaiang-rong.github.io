@@ -10,4 +10,3 @@ bibtex_url: 'http://jessica-hub.github.io/files/proceedings.bib'
 citation: 'Y. Fu, S. Rong, W. Zhao, H. Shen. &quot;Research on monitoring device for indicating external damage risk of overhead line based on image recognition technology with binocular vision cameras.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 156–159, 2016.'
 ---
 
-Recommended citation: Y. Fu, S. Rong, W. Zhao, H. Shen. &quot;Research on monitoring device for indicating external damage risk of overhead line based on image recognition technology with binocular vision cameras.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 156–159, 2016.

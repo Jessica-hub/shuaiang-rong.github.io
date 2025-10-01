@@ -10,4 +10,3 @@ bibtex_url: 'http://jessica-hub.github.io/files/pubs.bib'
 citation: 'S. Rong, L. He, L. Du, Z. Li, S. Yu. &quot;Intelligent Detection of Vegetation Encroachment of Power Lines With Advanced Stereovision.&quot; <i>IEEE Transactions on Power Delivery</i>, vol. 36, no. 6, pp. 3477–3485, 2021.'
 ---
 
-Recommended citation: S. Rong, L. He, L. Du, Z. Li, S. Yu. &quot;Intelligent Detection of Vegetation Encroachment of Power Lines With Advanced Stereovision.&quot; <i>IEEE Transactions on Power Delivery</i>, vol. 36, no. 6, pp. 3477–3485, 2021.

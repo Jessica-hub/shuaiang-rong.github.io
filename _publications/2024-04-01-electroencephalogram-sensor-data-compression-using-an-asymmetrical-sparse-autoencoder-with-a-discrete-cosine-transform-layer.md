@@ -10,4 +10,3 @@ bibtex_url: 'http://jessica-hub.github.io/files/proceedings.bib'
 citation: 'X. Zhu, H. Pan, S. Rong, A. E. Cetin. &quot;Electroencephalogram Sensor Data Compression Using an Asymmetrical Sparse Autoencoder with a Discrete Cosine Transform Layer.&quot; <i>ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</i>, pp. 2160–2164, 2024.'
 ---
 
-Recommended citation: X. Zhu, H. Pan, S. Rong, A. E. Cetin. &quot;Electroencephalogram Sensor Data Compression Using an Asymmetrical Sparse Autoencoder with a Discrete Cosine Transform Layer.&quot; <i>ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</i>, pp. 2160–2164, 2024.

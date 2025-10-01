@@ -10,4 +10,3 @@ bibtex_url: 'http://jessica-hub.github.io/files/proceedings.bib'
 citation: 'M. Ao, D. Ming, R. Shuaiang. &quot;The image study of partial discharge location by acoustic measurement.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 733–736, 2016.'
 ---
 
-Recommended citation: M. Ao, D. Ming, R. Shuaiang. &quot;The image study of partial discharge location by acoustic measurement.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 733–736, 2016.

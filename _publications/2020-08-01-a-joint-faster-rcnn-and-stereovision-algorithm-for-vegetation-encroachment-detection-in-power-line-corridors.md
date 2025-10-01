@@ -10,4 +10,3 @@ bibtex_url: 'http://jessica-hub.github.io/files/proceedings.bib'
 citation: 'S. Rong, L. He. &quot;A Joint Faster RCNN and Stereovision Algorithm for Vegetation Encroachment Detection in Power Line Corridors.&quot; <i>2020 IEEE Power &amp; Energy Society General Meeting (PESGM)</i>, pp. 1–5, 2020.'
 ---
 
-Recommended citation: S. Rong, L. He. &quot;A Joint Faster RCNN and Stereovision Algorithm for Vegetation Encroachment Detection in Power Line Corridors.&quot; <i>2020 IEEE Power &amp; Energy Society General Meeting (PESGM)</i>, pp. 1–5, 2020.

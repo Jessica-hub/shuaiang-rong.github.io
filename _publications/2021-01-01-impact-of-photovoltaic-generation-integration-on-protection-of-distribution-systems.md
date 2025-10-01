@@ -10,4 +10,3 @@ bibtex_url: 'http://jessica-hub.github.io/files/pubs.bib'
 citation: 'S. Rong, L. He. &quot;Impact of Photovoltaic Generation Integration on Protection of Distribution Systems.&quot; <i></i>, 2021.'
 ---
 
-Recommended citation: S. Rong, L. He. &quot;Impact of Photovoltaic Generation Integration on Protection of Distribution Systems.&quot; <i></i>, 2021.

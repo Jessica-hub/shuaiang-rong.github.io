@@ -10,4 +10,3 @@ bibtex_url: 'http://jessica-hub.github.io/files/proceedings.bib'
 citation: 'W. B. Zhao, S. A. Rong, Q. G. Yu, X. G. Zhang, D. H. Xuan, W. Z. Sun, L. Cao. &quot;Unified dynamic rate system of generation and transmission based on technology of condition monitoring for overhead transmission line.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 172–175, 2016.'
 ---
 
-Recommended citation: W. B. Zhao, S. A. Rong, Q. G. Yu, X. G. Zhang, D. H. Xuan, W. Z. Sun, L. Cao. &quot;Unified dynamic rate system of generation and transmission based on technology of condition monitoring for overhead transmission line.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 172–175, 2016.

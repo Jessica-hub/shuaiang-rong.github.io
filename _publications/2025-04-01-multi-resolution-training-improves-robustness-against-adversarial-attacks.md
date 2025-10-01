@@ -10,4 +10,3 @@ bibtex_url: 'http://jessica-hub.github.io/files/pubs.bib'
 citation: 'S. Rong, E. Hamdan, A. E. Cetin. &quot;Multi-resolution training improves robustness against adversarial attacks.&quot; <i>Signal, Image and Video Processing</i>, vol. 19, no. 6, 2025.'
 ---
 
-Recommended citation: S. Rong, E. Hamdan, A. E. Cetin. &quot;Multi-resolution training improves robustness against adversarial attacks.&quot; <i>Signal, Image and Video Processing</i>, vol. 19, no. 6, 2025.
