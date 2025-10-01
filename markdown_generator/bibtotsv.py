@@ -33,7 +33,12 @@ def ieee_citation(entry):
                 formatted_authors.append(full_name)
             else:
                 formatted_authors.append(name.strip())
-    authors = ", ".join(formatted_authors)
+    
+    # Insert "and" before the last author
+    if len(formatted_authors) > 1:
+        authors = ", ".join(formatted_authors[:-1]) + ", and " + formatted_authors[-1]
+    else:
+        authors = formatted_authors[0] if formatted_authors else ""
 
     title = entry.get("title", "").replace("{", "").replace("}", "").replace("\n", " ")
     title = html.escape(title)
