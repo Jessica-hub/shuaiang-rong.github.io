@@ -20,9 +20,19 @@ def ieee_citation(entry):
         if len(parts) == 2:
             last, firsts = parts[0].strip(), parts[1].strip()
             initials = " ".join([f"{x[0]}." for x in firsts.split() if x])
-            formatted_authors.append(f"{last}, {initials}")
+            full_name = f"{initials} {last}".strip()
+            formatted_authors.append(full_name)
         else:
-            formatted_authors.append(name.strip())
+            # If no comma, just try initials on first part:
+            name_parts = name.strip().split()
+            if len(name_parts) >= 2:
+                last = name_parts[-1]
+                firsts = " ".join(name_parts[:-1])
+                initials = " ".join([f"{x[0]}." for x in firsts.split() if x])
+                full_name = f"{initials} {last}".strip()
+                formatted_authors.append(full_name)
+            else:
+                formatted_authors.append(name.strip())
     authors = ", ".join(formatted_authors)
 
     title = entry.get("title", "").replace("{", "").replace("}", "").replace("\n", " ")
@@ -77,9 +87,9 @@ def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1, category="manuscripts"):
             if year and month and day:
                 pub_date = f"{year}-{month}-{day}"
             elif year and month:
-                pub_date = f"{year}-{month}"
+                pub_date = f"{year}-{month}-01"
             elif year:
-                pub_date = year
+                pub_date = f"{year}-01-01"
             else:
                 pub_date = ""
 
