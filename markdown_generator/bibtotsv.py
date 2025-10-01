@@ -44,15 +44,7 @@ def ieee_citation(entry):
         citation += f", {year}."
     return citation
 
-def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1):
-    # Decide category based on file name
-    if "pub" in bibfile.lower():
-        category = "manuscripts"
-    elif "proceeding" in bibfile.lower():
-        category = "conferences"
-    else:
-        category = "misc"
-
+def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1, category="manuscripts"):
     with open(bibfile, encoding="utf-8") as bibtex_file:
         bib_database = bibtexparser.load(bibtex_file)
 
@@ -95,6 +87,8 @@ def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1):
             venue = fields.get("journal") or fields.get("booktitle") or ""
             citation = ieee_citation(fields)
 
+            paper_url = f"http://jessica-hub.github.io/files/paper{i}.pdf"
+
             writer.writerow({
                 "pub_date": pub_date,
                 "title": title,
@@ -102,13 +96,13 @@ def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1):
                 "excerpt": "",
                 "citation": citation,
                 "url_slug": slugify(title),
-                "paper_url": f"http://jessica-hub.github.io/files/paper{i}.pdf",
+                "paper_url": paper_url,
                 "slides_url": "",
                 "bibtex_url": f"http://jessica-hub.github.io/files/{bibfile}",
                 "category": category
             })
             i += 1
 
-# Run for both .bib files
-bib_to_tsv("pubs.bib", "publications_journals.tsv", paper_start_idx=1)
-bib_to_tsv("proceedings.bib", "publications_proceedings.tsv", paper_start_idx=20)
+# Call the updated function
+bib_to_tsv("pubs.bib", "publications_journals.tsv", paper_start_idx=1, category="manuscripts")
+bib_to_tsv("proceedings.bib", "publications_proceedings.tsv", paper_start_idx=20, category="conferences")

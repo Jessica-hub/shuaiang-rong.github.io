@@ -1,6 +1,7 @@
 ---
 title: "Unified dynamic rate system of generation and transmission based on technology of condition monitoring for overhead transmission line"
 collection: publications
+category: conferences
 permalink: /publication/2016-09-unified-dynamic-rate-system-of-generation-and-transmission-based-on-technology-of-condition-monitoring-for-overhead-transmission-line
 date: 2016-09
 venue: '2016 International Conference on Condition Monitoring and Diagnosis (CMD)'
@@ -9,4 +10,4 @@ bibtex_url: 'http://jessica-hub.github.io/files/proceedings.bib'
 citation: 'Zhao, W. B., Rong, S. A., Yu, Q. G., Zhang, X. G., Xuan, D. H., Sun, W. Z., Cao, L.. &quot;Unified dynamic rate system of generation and transmission based on technology of condition monitoring for overhead transmission line.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 172–175, 2016.'
 ---
 
-Recommended citation: {item.citation}
+Recommended citation: Zhao, W. B., Rong, S. A., Yu, Q. G., Zhang, X. G., Xuan, D. H., Sun, W. Z., Cao, L.. &quot;Unified dynamic rate system of generation and transmission based on technology of condition monitoring for overhead transmission line.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 172–175, 2016.

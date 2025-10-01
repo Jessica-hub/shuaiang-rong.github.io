@@ -1,6 +1,7 @@
 ---
 title: "Performance of Grid-forming Control of Grid-edge DERs in Distribution Grids"
 collection: publications
+category: conferences
 permalink: /publication/2022-07-performance-of-grid-forming-control-of-grid-edge-ders-in-distribution-grids
 date: 2022-07
 venue: '2022 IEEE Power &amp; Energy Society General Meeting (PESGM)'
@@ -9,4 +10,4 @@ bibtex_url: 'http://jessica-hub.github.io/files/proceedings.bib'
 citation: 'Yu, S., Rong, S., He, L.. &quot;Performance of Grid-forming Control of Grid-edge DERs in Distribution Grids.&quot; <i>2022 IEEE Power &amp; Energy Society General Meeting (PESGM)</i>, pp. 1–5, 2022.'
 ---
 
-Recommended citation: {item.citation}
+Recommended citation: Yu, S., Rong, S., He, L.. &quot;Performance of Grid-forming Control of Grid-edge DERs in Distribution Grids.&quot; <i>2022 IEEE Power &amp; Energy Society General Meeting (PESGM)</i>, pp. 1–5, 2022.

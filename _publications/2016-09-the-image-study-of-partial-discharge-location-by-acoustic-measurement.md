@@ -1,6 +1,7 @@
 ---
 title: "The image study of partial discharge location by acoustic measurement"
 collection: publications
+category: conferences
 permalink: /publication/2016-09-the-image-study-of-partial-discharge-location-by-acoustic-measurement
 date: 2016-09
 venue: '2016 International Conference on Condition Monitoring and Diagnosis (CMD)'
@@ -9,4 +10,4 @@ bibtex_url: 'http://jessica-hub.github.io/files/proceedings.bib'
 citation: 'Ma Ao, Dong Ming, Rong Shuaiang. &quot;The image study of partial discharge location by acoustic measurement.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 733–736, 2016.'
 ---
 
-Recommended citation: {item.citation}
+Recommended citation: Ma Ao, Dong Ming, Rong Shuaiang. &quot;The image study of partial discharge location by acoustic measurement.&quot; <i>2016 International Conference on Condition Monitoring and Diagnosis (CMD)</i>, pp. 733–736, 2016.

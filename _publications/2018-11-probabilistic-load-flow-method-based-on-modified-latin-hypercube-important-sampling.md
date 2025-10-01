@@ -1,6 +1,7 @@
 ---
 title: "Probabilistic Load Flow Method Based on Modified Latin Hypercube-Important Sampling"
 collection: publications
+category: manuscripts
 permalink: /publication/2018-11-probabilistic-load-flow-method-based-on-modified-latin-hypercube-important-sampling
 date: 2018-11
 venue: 'Energies'
@@ -9,4 +10,4 @@ bibtex_url: 'http://jessica-hub.github.io/files/pubs.bib'
 citation: 'Li, Q., Wang, X., Rong, S.. &quot;Probabilistic Load Flow Method Based on Modified Latin Hypercube-Important Sampling.&quot; <i>Energies</i>, vol. 11, no. 11, pp. 3171, 2018.'
 ---
 
-Recommended citation: {item.citation}
+Recommended citation: Li, Q., Wang, X., Rong, S.. &quot;Probabilistic Load Flow Method Based on Modified Latin Hypercube-Important Sampling.&quot; <i>Energies</i>, vol. 11, no. 11, pp. 3171, 2018.
