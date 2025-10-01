@@ -11,4 +11,4 @@ location: "Chicago, IL, USA"
 **Description:**  
 Electric circuit elements, Kirchhoff’s laws, Laplace methods, network theorems.  
 
-**Role:** Laboratory Instructor (grading lab reports; holding weekly office hours; undergraduate lab sessions).
+**Role:** Laboratory Teaching Assistant (grading lab reports; holding weekly office hours; undergraduate lab sessions).

@@ -12,4 +12,4 @@ location: "Chicago, IL, USA"
 Introduction to embedded systems and microcontrollers: instruction set, data representations, assembly programming, mixed C/assembly programming, memory organization, interrupt processing, I/O devices and interfacing. Includes programming laboratory.  
 
 
-**Role:** Laboratory Instructor (labs, discussion, programming support).
+**Role:** Laboratory Teaching Assistant (labs, discussion, programming support).

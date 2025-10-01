@@ -11,4 +11,4 @@ location: "Chicago, IL, USA"
 **Description:**  
 Linear circuit analysis: networks, theorems, dependent sources, op-amps, transients, sinusoidal analysis, filters.  
 
-**Role:** Laboratory Instructor (grading lab reports; holding weekly office hours; undergraduate lab sessions).
+**Role:** Laboratory Teaching Assistant (grading lab reports; holding weekly office hours; undergraduate lab sessions).
