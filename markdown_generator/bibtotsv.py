@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Oct  1 15:44:13 2025
-
 @author: olivi
 """
 
@@ -14,11 +13,20 @@ def slugify(title):
     return re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')
 
 def ieee_citation(entry):
-    # build author string
     authors_raw = entry.get("author", "").replace("\n", " ").split(" and ")
-    authors = ", ".join(a.strip() for a in authors_raw)
+    formatted_authors = []
+    for name in authors_raw:
+        parts = name.strip().split(",")
+        if len(parts) == 2:
+            last, firsts = parts[0].strip(), parts[1].strip()
+            initials = " ".join([f"{x[0]}." for x in firsts.split() if x])
+            formatted_authors.append(f"{last}, {initials}")
+        else:
+            formatted_authors.append(name.strip())
+    authors = ", ".join(formatted_authors)
+
     title = entry.get("title", "").replace("{", "").replace("}", "").replace("\n", " ")
-    title = html.escape(title)  # ensure quotes etc safe
+    title = html.escape(title)
     venue = entry.get("journal") or entry.get("booktitle") or ""
     year = entry.get("year", "")
     volume = entry.get("volume", "")
@@ -49,38 +57,51 @@ def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1):
         writer.writeheader()
 
         month_map = {
-            "jan": "01","feb": "02","mar": "03","apr": "04",
-            "may": "05","jun": "06","jul": "07","aug": "08",
-            "sep": "09","oct": "10","nov": "11","dec": "12"
+            "jan": "01", "feb": "02", "mar": "03", "apr": "04",
+            "may": "05", "jun": "06", "jul": "07", "aug": "08",
+            "sep": "09", "oct": "10", "nov": "11", "dec": "12",
+            "january": "01", "february": "02", "march": "03", "april": "04",
+            "june": "06", "july": "07", "august": "08", "september": "09",
+            "october": "10", "november": "11", "december": "12"
         }
 
         i = paper_start_idx
         for entry in bib_database.entries:
-            year = entry.get("year", "1900")
-            month = entry.get("month", "01")
-            month = month_map.get(month.lower(), month.zfill(2))
-            pub_date = f"{year}-{month}-01"
+            fields = entry
+            year = str(fields.get("year", "")).strip()
+            month_raw = str(fields.get("month", "")).strip().lower()
+            month = month_map.get(month_raw[:3], "")
+            day = str(fields.get("day", "")).zfill(2) if "day" in fields else ""
 
-            title = entry.get("title", "").strip("{}")
-            venue = entry.get("journal") or entry.get("booktitle") or ""
-            citation = ieee_citation(entry)
+            # Final pub_date
+            if year and month and day:
+                pub_date = f"{year}-{month}-{day}"
+            elif year and month:
+                pub_date = f"{year}-{month}"
+            elif year:
+                pub_date = year
+            else:
+                pub_date = ""
 
-            # PDF files you named paper1.pdf, paper2.pdf etc.
+            title = fields.get("title", "").strip("{} \n")
+            venue = fields.get("journal") or fields.get("booktitle") or ""
+            citation = ieee_citation(fields)
+
             paper_url = f"http://jessica-hub.github.io/files/paper{i}.pdf"
 
             writer.writerow({
                 "pub_date": pub_date,
                 "title": title,
                 "venue": venue,
-                "excerpt": "",  # optional
+                "excerpt": "",
                 "citation": citation,
                 "url_slug": slugify(title),
                 "paper_url": paper_url,
-                "slides_url": "",  # leave blank
+                "slides_url": "",
                 "bibtex_url": f"http://jessica-hub.github.io/files/{bibfile}"
             })
             i += 1
 
-# Run for both bib files
+# Run for both .bib files
 bib_to_tsv("pubs.bib", "publications_journals.tsv", paper_start_idx=1)
-bib_to_tsv("proceedings.bib", "publications_proceedings.tsv", paper_start_idx=20)  # adjust start idx if needed
+bib_to_tsv("proceedings.bib", "publications_proceedings.tsv", paper_start_idx=20)
