@@ -1,5 +1,5 @@
 ---
-title: "ECE 266 – [Course Title Placeholder]"
+title: "ECE 266: Introduction to Embedded Systems (Summer 2024)"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2024-summer-ece266
@@ -9,6 +9,7 @@ location: "Chicago, IL, USA"
 ---
 
 **Description:**  
-[Add description for ECE 266 here.]  
+Introduction to embedded systems and microcontrollers: instruction set, data representations, assembly programming, mixed C/assembly programming, memory organization, interrupt processing, I/O devices and interfacing. Includes programming laboratory.  
 
-**Role:** Teaching Assistant (labs/discussion).
+
+**Role:** Laboratory Instructor (labs, discussion, programming support).

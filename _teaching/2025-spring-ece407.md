@@ -1,5 +1,5 @@
 ---
-title: "ECE 407 / BME 407 – Pattern Recognition I"
+title: "ECE 407 / BME 407 – Pattern Recognition I (Spring 2025)"
 collection: teaching
 type: "Graduate & Undergraduate course"
 permalink: /teaching/2025-spring-ece407
@@ -11,4 +11,4 @@ location: "Chicago, IL, USA"
 **Description:**  
 Automated detection, recognition, classification, parametric and nonparametric methods. Applications to image and waveform analysis.  
 
-**Role:** Teaching Assistant (discussion/grading; undergraduate & graduate).
+**Role:** Teaching Assistant (discussion/grading; weekly office hours; undergraduate & graduate).
