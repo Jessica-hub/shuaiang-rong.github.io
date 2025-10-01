@@ -102,7 +102,15 @@ def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1, category="manuscripts"):
             venue = fields.get("journal") or fields.get("booktitle") or ""
             citation = ieee_citation(fields)
 
-            paper_url = f"http://jessica-hub.github.io/files/paper{i}.pdf"
+            # Set filename prefix based on category
+            if category == "manuscripts":
+                paper_id = f"J{i}"
+            elif category == "conferences":
+                paper_id = f"C{i}"
+            else:
+                paper_id = f"P{i}"
+
+            paper_url = f"http://jessica-hub.github.io/files/{paper_id}.pdf"
 
             writer.writerow({
                 "pub_date": pub_date,
@@ -118,6 +126,7 @@ def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1, category="manuscripts"):
             })
             i += 1
 
+
 # Call the updated function
 bib_to_tsv("pubs.bib", "publications_journals.tsv", paper_start_idx=1, category="manuscripts")
-bib_to_tsv("proceedings.bib", "publications_proceedings.tsv", paper_start_idx=20, category="conferences")
+bib_to_tsv("proceedings.bib", "publications_proceedings.tsv", paper_start_idx=1, category="conferences")
