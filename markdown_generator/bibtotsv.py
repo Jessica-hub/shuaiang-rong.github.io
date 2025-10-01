@@ -45,13 +45,22 @@ def ieee_citation(entry):
     return citation
 
 def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1):
+    # Decide category based on file name
+    if "pub" in bibfile.lower():
+        category = "manuscripts"
+    elif "proceeding" in bibfile.lower():
+        category = "conferences"
+    else:
+        category = "misc"
+
     with open(bibfile, encoding="utf-8") as bibtex_file:
         bib_database = bibtexparser.load(bibtex_file)
 
     with open(tsvfile, "w", newline="", encoding="utf-8") as tsvfile_out:
         fieldnames = [
             "pub_date", "title", "venue", "excerpt",
-            "citation", "url_slug", "paper_url", "slides_url", "bibtex_url"
+            "citation", "url_slug", "paper_url", "slides_url",
+            "bibtex_url", "category"
         ]
         writer = csv.DictWriter(tsvfile_out, fieldnames=fieldnames, delimiter="\t")
         writer.writeheader()
@@ -73,7 +82,6 @@ def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1):
             month = month_map.get(month_raw[:3], "")
             day = str(fields.get("day", "")).zfill(2) if "day" in fields else ""
 
-            # Final pub_date
             if year and month and day:
                 pub_date = f"{year}-{month}-{day}"
             elif year and month:
@@ -87,8 +95,6 @@ def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1):
             venue = fields.get("journal") or fields.get("booktitle") or ""
             citation = ieee_citation(fields)
 
-            paper_url = f"http://jessica-hub.github.io/files/paper{i}.pdf"
-
             writer.writerow({
                 "pub_date": pub_date,
                 "title": title,
@@ -96,9 +102,10 @@ def bib_to_tsv(bibfile, tsvfile, paper_start_idx=1):
                 "excerpt": "",
                 "citation": citation,
                 "url_slug": slugify(title),
-                "paper_url": paper_url,
+                "paper_url": f"http://jessica-hub.github.io/files/paper{i}.pdf",
                 "slides_url": "",
-                "bibtex_url": f"http://jessica-hub.github.io/files/{bibfile}"
+                "bibtex_url": f"http://jessica-hub.github.io/files/{bibfile}",
+                "category": category
             })
             i += 1
 
