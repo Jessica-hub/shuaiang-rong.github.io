@@ -1,5 +1,5 @@
 ---
-title: "ECE 412 – Introduction to Filter Synthesis"
+title: "ECE 412 – Introduction to Filter Synthesis (Spring 2024)"
 collection: teaching
 type: "Graduate & Undergraduate course"
 permalink: /teaching/2024-spring-ece412
