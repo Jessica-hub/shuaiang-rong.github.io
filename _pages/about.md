@@ -11,20 +11,20 @@ redirect_from:
 
 Hi! I’m **Shuaiang Rong**, a Ph.D. candidate in the Department of Electrical and Computer Engineering at the [University of Illinois Chicago](https://ece.uic.edu/).  
 
-My work focuses on developing artificial intelligence for power systems, environmental hazard prediction and sustainability. I design and implement advanced deep learning methods that integrate computer vision, remote sensing, and signal processing, with applications in **wildfire spread forecasting, vegetation management for power systems, renewable energy integration, and air-leak detection**. I am passionate about building models that are both accurate and efficient, enabling deployment in real-world systems where resilience and sustainability are critical.
+My work focuses on developing artificial intelligence for power systems, environmental hazard prediction and sustainability. I design and implement advanced deep learning methods that integrate computer vision, remote sensing, and signal processing, with applications in **vegetation management for power line monitoring, renewable energy integration (PV/wind), wildfire/flood spread forecasting, and IR-based window air-leak detection**. I am passionate about building models that are both accurate and efficient, enabling deployment in real-world systems where resilience and sustainability are critical.
 
 ---
 
 ## My work and research
 
 
-My research lies at the intersection of power systems, renewable energy, and artificial intelligence, combining methods from power electronics, optimization, signal processing, and deep learning.  
+My research lies at the intersection of power systems, renewable energy, and artificial intelligence, combining methods from power electronics, control, optimization, signal processing, and deep learning.  
 
 I am broadly interested in developing multidisciplinary approaches that integrate traditional power engineering, signal processing with cutting-edge deep learning to address real-world challenges in grid resilience, renewable integration, and environmental hazard monitoring.    
 
 
 Some of my previous work has explored:  
-- Inverter-based resources and grid protection in weak distribution/subtransmission systems, including modeling, simulation, and fault analysis.  
+- Inverter-based resources control and protection in weak distribution/subtransmission systems, including modeling, simulation, and fault analysis.  
 - Machine learning techniques for renewable energy integration and system stability.  
 - AI-driven applications such as wildfire/flood spread forecasting, vegetation management around power lines, and infrared-based air-leak detection.  
 - Deep learning and computer vision frameworks for remote sensing, environmental monitoring, and adversarially robust model design.  
