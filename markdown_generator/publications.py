@@ -22,88 +22,84 @@
 # We are using the very handy pandas library for dataframes.
 
 # In[2]:
-
 import pandas as pd
+import os
 
-
-# ## Import TSV
-# 
-# Pandas makes this easy with the read_csv function. We are using a TSV, so we specify the separator as a tab, or `\t`.
-# 
-# I found it important to put this data in a tab-separated values format, because there are a lot of commas in this kind of data and comma-separated values can get messed up. However, you can modify the import statement, as pandas also has read_excel(), read_json(), and others.
-
-# In[3]:
-
+# -------------------
+# 1. Load TSV
+# -------------------
 publications = pd.read_csv("publications.tsv", sep="\t", header=0)
-publications
 
-
-# ## Escape special characters
-# 
-# YAML is very picky about how it takes a valid string, so we are replacing single and double quotes (and ampersands) with their HTML encoded equivilents. This makes them look not so readable in raw format, but they are parsed and rendered nicely.
-
-# In[4]:
-
+# -------------------
+# 2. Escape for YAML
+# -------------------
 html_escape_table = {
     "&": "&amp;",
     '"': "&quot;",
     "'": "&apos;"
-    }
+}
 
 def html_escape(text):
-    """Produce entities within text."""
-    return "".join(html_escape_table.get(c,c) for c in text)
+    """Safely escape special chars for YAML/HTML"""
+    if pd.isna(text) or text is None:
+        return ""
+    text = str(text)
+    return "".join(html_escape_table.get(c, c) for c in text)
 
+# -------------------
+# 3. Generate Markdown files
+# -------------------
+for _, item in publications.iterrows():
+    pub_date = str(item.pub_date) if not pd.isna(item.pub_date) else "1900-01-01"
+    url_slug = str(item.url_slug) if not pd.isna(item.url_slug) else "untitled"
 
-# ## Creating the markdown files
-# 
-# This is where the heavy lifting is done. This loops through all the rows in the TSV dataframe, then starts to concatentate a big string (```md```) that contains the markdown for each type. It does the YAML metadata first, then does the description for the individual page. If you don't want something to appear (like the "Recommended citation")
+    md_filename = f"{pub_date}-{url_slug}.md"
+    html_filename = f"{pub_date}-{url_slug}"
+    year = pub_date[:4]
 
-# In[5]:
+    # YAML frontmatter
+    md = "---\n"
+    md += f'title: "{html_escape(item.title)}"\n'
 
-import os
-for row, item in publications.iterrows():
-    
-    md_filename = str(item.pub_date) + "-" + item.url_slug + ".md"
-    html_filename = str(item.pub_date) + "-" + item.url_slug
-    year = item.pub_date[:4]
-    
-    ## YAML variables
-    
-    md = "---\ntitle: \""   + item.title + '"\n'
+    # Use category from TSV if exists, else default
+    category = item.get("category", "manuscripts")
+    if pd.isna(category) or category == "":
+        category = "manuscripts"
+    md += f"collection: {category}\n"
 
-    # TODO Update to use the category assigned in the TSV file
-    md += """collection: manuscripts"""
-    
-    md += """\npermalink: /publication/""" + html_filename
-    
-    if len(str(item.excerpt)) > 5:
-        md += "\nexcerpt: '" + html_escape(item.excerpt) + "'"
-    
-    md += "\ndate: " + str(item.pub_date) 
-    
-    md += "\nvenue: '" + html_escape(item.venue) + "'"
-    
-    if len(str(item.paper_url)) > 5:
-        md += "\npaperurl: '" + item.paper_url + "'"
-    
-    md += "\ncitation: '" + html_escape(item.citation) + "'"
-    
-    md += "\n---"
-    
-    ## Markdown description for individual page
-    
-    if len(str(item.paper_url)) > 5:
-        md += "\n\n<a href='" + item.paper_url + "'>Download paper here</a>\n" 
-        
-    if len(str(item.excerpt)) > 5:
+    md += f"permalink: /publication/{html_filename}\n"
+
+    if not pd.isna(item.excerpt) and len(str(item.excerpt)) > 5:
+        md += f"excerpt: '{html_escape(item.excerpt)}'\n"
+
+    md += f"date: {pub_date}\n"
+    md += f"venue: '{html_escape(item.venue)}'\n"
+
+    if not pd.isna(item.paper_url) and len(str(item.paper_url)) > 5:
+        md += f"paperurl: '{item.paper_url}'\n"
+
+    md += f"citation: '{html_escape(item.citation)}'\n"
+    md += "---\n"
+
+    # -------------------
+    # Body Content
+    # -------------------
+    if not pd.isna(item.paper_url) and len(str(item.paper_url)) > 5:
+        md += f"\n<a href='{item.paper_url}'>Download paper here</a>\n"
+
+    if not pd.isna(item.slides_url) and len(str(item.slides_url)) > 5:
+        md += f"\n<a href='{item.slides_url}'>Slides</a>\n"
+
+    if not pd.isna(item.excerpt) and len(str(item.excerpt)) > 5:
         md += "\n" + html_escape(item.excerpt) + "\n"
-        
-    md += "\nRecommended citation: " + item.citation
-    
-    md_filename = os.path.basename(md_filename)
-       
-    with open("../_publications/" + md_filename, 'w') as f:
+
+    md += "\nRecommended citation: " + html_escape(item.citation)
+
+    # -------------------
+    # Save File
+    # -------------------
+    os.makedirs("../_publications", exist_ok=True)
+    with open(os.path.join("../_publications", md_filename), "w", encoding="utf-8") as f:
         f.write(md)
 
-
+    print(f"✔ Created {md_filename}")
