@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate & Graduate Courses"
 permalink: /teaching/teaching-experience-1
 venue: "University of Illinois Chicago, Department of ECE"
-date: 2019 to 2025
+
 location: "Chicago, IL, USA"
 ---
 
