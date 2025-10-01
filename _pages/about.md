@@ -34,9 +34,11 @@ A central theme of my work is integrating signal processing techniques — such 
 ---
 
 ## My background and history
+
 I received my B.S. in Electrical Engineering (Automation) and M.S. in Electrical Engineering (Power Systems) from Shanghai University of Electric Power in 2015 and 2018, respectively. I joined the University of Illinois Chicago in 2019 for my Ph.D. in Electrical and Computer Engineering.  
 
 Alongside my academic training, I gained industry experience as an intern with Quanta Technology in 2023, where I worked on power distribution line monitoring and customer outage prediction projects. My broader academic trajectory reflects a strong foundation in both power systems and power electronics and emerging deep learning methodologies for sustainability and hazard mitigation.
+
 ---
 
 ## My academic community
