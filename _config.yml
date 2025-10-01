@@ -23,7 +23,7 @@ repository               : "jessica-hub.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Shuaiang Rong"
   pronouns         : she/her # example: "she/her"  
   bio              : "Ph.D. candidate in [Electrical and Computer Engineering at University of Illinois Chicago](https://ece.uic.edu/)."
@@ -40,7 +40,7 @@ author:
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0002-2121-7175"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
 
